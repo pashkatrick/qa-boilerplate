@@ -1,4 +1,4 @@
-# qa-boilerplate
+# QA python/pytest project boilerplate
 
 ## particularity
 there is a string in `pyproject.toml` 
