@@ -1,0 +1,6 @@
+FROM python:3
+LABEL maintainer="myboy@exmaple.com"
+ENV TZ="Europe/Moscow"
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip install --upgrade pip && pip install -U -r requirements.txt

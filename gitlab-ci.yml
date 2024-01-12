@@ -1,0 +1,46 @@
+stages:
+  - build
+  - linter
+  - tests
+  - report
+
+variables:
+  REPORT_RESULT: ./allure_result
+
+build dependencies:
+  when: manual
+  allow_failure: true
+  stage: build
+  script:
+    - echo builded!
+
+lint:
+  stage: linter
+  script:
+    - echo linted!
+
+tests:
+  allow_failure: true
+  stage: tests
+  script:
+    - echo tested!
+  artifacts:
+    when: always
+    paths:
+      - $REPORT_RESULT
+
+report manual:
+  when: manual
+  except: [master]
+  extends: .reporter
+
+report:
+  only: [master]
+  extends: .reporter
+
+.reporter:
+  stage: report
+  dependencies:
+    - tests
+  script:
+    - echo send report!
