@@ -25,6 +25,7 @@ allure-pytest
 pydantic
 pytest
 pytest-retry
+pytest-rerunfailures
 pytest-xdist
 requests
 ruff
