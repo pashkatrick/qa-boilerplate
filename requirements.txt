@@ -1,5 +1,4 @@
 allure-pytest==2.13.2
-allure-python-commons==2.13.2
 pydantic==2.5.3
 pydantic_core==2.14.6
 pytest==7.4.4
@@ -10,3 +9,4 @@ pytest-xdist==3.5.0
 requests==2.31.0
 ruff==0.1.12
 soft-assert==1.0.5
+pytest-memray==1.5.0
