@@ -30,6 +30,7 @@ pytest-xdist
 requests
 ruff
 soft-assert
+memray
 ```
 
 ## codestyle
